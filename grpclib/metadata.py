@@ -110,7 +110,7 @@ def decode_grpc_message(value: str) -> str:
     return unquote(value, encoding='utf-8', errors='replace')
 
 
-_KEY_RE = re.compile(r'^[0-9a-z_.\-]+$')
+_KEY_RE = re.compile(r'^[0-9a-zA-Z_.\-]+$')
 _VALUE_RE = re.compile(r'^[ !-~]+$')  # 0x20-0x7E - space and printable ASCII
 _SPECIAL = {
     'te',
